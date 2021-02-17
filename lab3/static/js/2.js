@@ -13,13 +13,15 @@ doList.addEventListener('click', (event) =>{
         saveData();
     }
     if (event.target.className === 'checkbox'){
-        const isChecked = event.target.checked;
+        const check = event.target;
         const parent = event.target.parentNode.parentNode;
         const p = parent.children[1].children[0]
-        if (!isChecked){
+        if (!check.checked){
             p.className = 'text';  
+            check.removeAttribute('checked');
         }else {
             p.className = p.className + ' line-cross';
+            check.setAttribute('checked', '1');
         }
         saveData();
     }
@@ -27,18 +29,7 @@ doList.addEventListener('click', (event) =>{
 
 function loadData(){
     const tasks = document.getElementById('list');
-    const s = JSON.parse(localStorage.getItem('myTasks'));
-    tasks.innerHTML = s;
-    if (tasks.children.length !== 0){
-        tasks.className = 'list';
-    }
-    for (let x of tasks.children){
-        if (x === undefined) continue;
-        try{
-            if (x.children[1].children[0].className === 'text line-cross'){
-                x.children[0].children[0].checked = true;
-            }
-        }finally{}
-    }
+    tasks.innerHTML = JSON.parse(localStorage.getItem('myTasks'));
+    if (tasks.children.length !== 0) tasks.className = 'list';
 }
 loadData();
