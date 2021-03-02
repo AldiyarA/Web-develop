@@ -1,0 +1,15 @@
+.main{
+  width: 700px;
+}
+.main-routing{
+  border: #1E88E5 solid 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: white;
+  min-height: 500px;
+  padding: 10px 30px;
+  /*display: flex;*/
+  /*flex-flow: row wrap;*/
+  /*justify-content: space-around;*/
+}
+

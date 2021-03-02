@@ -1,0 +1,39 @@
+<div *ngIf="category">
+  <h1>{{category.name}}</h1>
+  <div class="products" *ngFor="let product of products">
+    <div>
+      <a routerLink="/categories/{{category.id}}/products/{{product.id}}">
+        <div class="product-image-block">
+          <img class="product-img" src="{{product.images[0]}}">
+        </div>
+      </a>
+    </div>
+    <div class="product-info">
+      <h2 class="product-name product-description">
+        <a routerLink="/categories/{{category.id}}/products/{{product.id}}">
+        {{product.name}}
+        </a>
+      </h2>
+      <h3 class="product-description">
+        Rating: {{product.rating}}
+        <img src="https://www.vippng.com/png/detail/63-637771_3d-rating-star-png-image-transparent-background-gold.png" width="25px" style="mix-blend-mode: multiply;">
+      </h3>
+      <div class="likes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" height="30px" (click)="product.like()">
+        <div class="likes-number">
+          <p>{{product.likes}}</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button (click)="product.remove(); loadProducts()">Remove</button>
+        <a href="https://t.me/share/url?url={{product.link}}&text=Hey everyone" target="_blank">
+          <button>Share</button>
+        </a>
+        <a routerLink="/categories/{{category.id}}/products/{{product.id}}">
+          <button>More about...</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
