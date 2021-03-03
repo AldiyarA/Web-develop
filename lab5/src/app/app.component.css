@@ -1,0 +1,9 @@
+.main{
+  width: 700px;
+}
+.main2{
+  min-height: 300px;
+  border: blue 3px solid;
+  background-color: white;
+  padding: 20px;
+}

@@ -1,0 +1,38 @@
+<div *ngIf="category">
+  <div  style="border-bottom: solid 1px gray">
+    <a routerLink="/category/{{category.id}}">
+      <h3> Go back to {{category.name}}</h3>
+    </a>
+  </div>
+  <div class="product">
+    <div style="display: flex; justify-content: center">
+    <div class="img-gallery">
+      <button (click)="product.nextImage(-1)">
+        <
+      </button>
+      <div class="product-images">
+        <img class="product-image" src="{{product.images[product.imageCnt]}}">
+      </div>
+      <button (click)="product.nextImage()">
+       >
+      </button>
+    </div>
+    </div>
+    <h3>{{product.name}}</h3>
+    <p *ngIf="product.description">Description: {{product.description}}</p>
+    <div class="product-part" style="display: flex;">
+      <h4 style="margin: 2px">Rating : {{product.rating}}</h4>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/1200px-Gold_Star.svg.png" width="20px" height="20px">
+    </div>
+    <div class="product-part" style="display: flex;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="20px" height="20px" (click)="product.like()">
+      <h4 style="margin: 0 10px">{{product.likes}}</h4>
+    </div>
+    <div class="product-part">
+      <a href="https://t.me/share/url?url={{product.link}}&text=Hey everyone">
+        <button style="margin-right: 50px">Share</button>
+      </a>
+      <a href="{{product.link}}"><button>Go to Amazon</button></a>
+    </div>
+  </div>
+</div>

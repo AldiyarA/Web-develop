@@ -1,0 +1,33 @@
+<div *ngIf="category">
+  <h1 style="border-bottom: solid 1px gray;">{{category.name}}</h1>
+  <div *ngFor="let product of products" class="product-on-list">
+    <div class="product-on-list-images-box">
+      <div class="product-on-list-images-box-2">
+        <a routerLink="/category/{{category.id}}/product/{{product.id}}">
+        <img class="product-on-list-image" src="{{product.images[0]}}">
+        </a>
+      </div>
+    </div>
+    <div class="product-on-list-info">
+      <h2>{{product.name}}</h2>
+      <div style="display: flex;">
+        <h4 style="margin: 2px">Rating : {{product.rating}}</h4>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gold_Star.svg/1200px-Gold_Star.svg.png" width="20px" height="20px">
+      </div>
+      <div style="display: flex;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="20px" height="20px" (click)="product.like()">
+        <h4 style="margin: 0 10px">{{product.likes}}</h4>
+      </div>
+      <div class="product-on-list-info-buttons">
+        <button (click)="product.remove(); loadProductList()">Delete</button>
+        <a routerLink="/category/{{category.id}}/product/{{product.id}}">
+        <button>More about</button>
+        </a>
+        <a href="https://t.me/share/url?url={{product.link}}&text=Hey everyone">
+        <button>Share</button>
+        </a>
+        <a href="{{product.link}}"><button>Go to Amazon</button></a>
+      </div>
+    </div>
+  </div>
+</div>

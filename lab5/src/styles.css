@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: gray;
+}
+.main1{
+  display: flex;
+  justify-content: space-around;
+}
+footer{
+  height: 200px;
+}
+header{
+  height: 50px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}

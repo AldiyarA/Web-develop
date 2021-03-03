@@ -1,0 +1,26 @@
+.categories{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.category{
+  width: 200px;
+  height: 200px;
+  border: 1px gray solid;
+  margin: 50px;
+}
+.category-name-1{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.category-name-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+  color: white;
+  text-shadow:  0 2px 4px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0,  1);;
+  text-align: center;
+}

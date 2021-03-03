@@ -1,0 +1,20 @@
+.img-gallery{
+  margin: 20px;
+  height: 500px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-images{
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-image{
+  max-height: 500px;
+  max-width: 500px;
+}
+.product-part{
+  margin-top: 20px;
+}

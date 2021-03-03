@@ -1,0 +1,12 @@
+<div *ngIf="categories" class="categories">
+  <div *ngFor="let category of categories" class="category">
+    <a routerLink="/category/{{category.id}}">
+    <div class="category-name-1">
+      <img src="{{category.image}}" style="position: absolute; height: 200px; width: 200px;" >
+      <div class="category-name-2">
+        <h1>{{category.name}}</h1>
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
