@@ -1,0 +1,5 @@
+<div class="categories">
+  <div *ngFor="let category of categories" class="category">
+    <input type = checkbox [(ngModel)] = 'category.isChecked' (change)="setCategory(category)">{{category.name}}
+  </div>
+</div>
