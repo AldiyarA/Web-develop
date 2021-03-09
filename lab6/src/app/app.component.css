@@ -1,0 +1,13 @@
+.main{
+  width: 1450px;
+}
+.main2{
+  min-height: 300px;
+  border: blue 3px solid;
+  /*background-color: white;*/
+  padding: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: antiquewhite;
+}
+

@@ -1,0 +1,49 @@
+.all-albums{
+  display: flex;
+  flex-flow: row wrap;
+}
+.album{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: gray 1px solid;
+  margin: 20px;
+  overflow: hidden;
+  padding: 50px;
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: white;
+}
+#title-text{
+  outline: none;
+  border: none;
+}
+.new-album{
+  width: min-content;
+  min-width: 100px;
+  margin: 20px;
+  border: gray 1px solid;
+  padding: 20px;
+  background-color: white;
+}
+.del-btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: orangered;
+  color: white;
+}
+.btn, .del-btn{
+  font-size: 20px;
+  cursor: pointer;
+}
+.title-txt{
+  overflow: hidden;
+  max-height: 70px;
+}
+.detail-btn{
+  position: absolute;
+  bottom: 30px;
+  rotation: 90deg;
+  rotation-point: right;
+}

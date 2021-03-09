@@ -1,0 +1,24 @@
+<!--<div *ngIf="album">-->
+<!--  <button (click)="this.router.navigate(['/albums', album.id])">Return back</button>-->
+<!--  <div style="display: flex; flex-flow: wrap">-->
+<!--  <div *ngFor="let photo of photos">-->
+<!--    <img src="{{photo.url}}">-->
+<!--&lt;!&ndash;    {{photo.title}}&ndash;&gt;-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</div>-->
+<h1 *ngIf="loading">Loading ...</h1>
+<app-photos-list *ngIf="!loading" [photos]="photos" [lastPage]="lastPage()" [page]="page" (toPage)="this.router.navigate(['/albums', albumId, 'photos', 'page', $event]); ngOnInit();" (link)="this.router.navigate(['/photos', $event]);"></app-photos-list>
+<!--<div *ngIf="!loading" class="all-photos">-->
+<!--  <div *ngFor="let photo of photos" class="photo-mini" (click)="this.router.navigate(['photos', photo.id])">-->
+<!--    <div class="photo-mini-img">-->
+<!--      <img src="{{photo.thumbnailUrl}}">-->
+<!--    </div>-->
+<!--    <div class="photo-mini-info">-->
+<!--      <p>ID : {{photo.id}}</p>-->
+<!--      <p>Album ID : {{photo.albumId}}</p>-->
+<!--      <p>Title : {{photo.title}}</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+

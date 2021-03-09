@@ -1,0 +1,45 @@
+.content{
+  display: flex;
+  justify-content: space-around;
+}
+.albums{
+
+}
+.photos{
+
+}
+.ap{
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border: gray solid 1px;
+  margin: 30px;
+  /*background-color: white;*/
+  box-sizing: border-box;
+  background-color: burlywood;
+  border-radius: 10px;
+  -webkit-box-shadow: 15px 10px 5px 0px rgba(189,189,189,0.6);
+  -moz-box-shadow: 15px 10px 5px 0px rgba(189,189,189,0.6);
+  box-shadow: 15px 10px 5px 0px rgba(189,189,189,0.6);
+}
+.go-btn-1{
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.icon{
+  width: 300px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.name{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.photo-icon{
+  top: 25px;
+}

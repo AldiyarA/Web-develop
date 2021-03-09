@@ -1,0 +1,20 @@
+<div class="new-album" *ngIf="!loading">
+  <button *ngIf="!creating" (click)="creating = true;">Create new Album</button>
+  <app-create-album *ngIf="creating"  (newAlbum)="newAlbum($event)" (cancel)="stopCreating()"></app-create-album>
+</div>
+<div *ngIf="!loading" class="all-albums">
+  <div *ngFor="let album of albums" class="album">
+    <button class="del-btn" (click)="deleteAlbum(album)">Delete</button>
+    <a routerLink="/albums/{{album.id}}">
+      <p>ID: {{album.id}}</p>
+      <p>User ID: {{album.userId}}</p>
+      <p class="title-txt">Title: {{album.title}}</p>
+      <button class="btn detail-btn">Go to details</button>
+    </a>
+  </div>
+</div>
+<p *ngIf="loading">Loading ...</p>
+
+<!--/*-->
+<!--(click)="this.router.navigate(['/albums', album.id])"-->
+<!--*/-->

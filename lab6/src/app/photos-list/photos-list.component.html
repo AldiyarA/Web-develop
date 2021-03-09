@@ -1,0 +1,35 @@
+<div class="page-change-btn">
+  <div class="page-changes">
+    <button class="change-btn" *ngIf="page != 1" (click)="goToPage(1)">First page</button>
+    <span *ngFor="let px of pages.reverse()"><button class="change-btn" *ngIf="page > px" (click)="goToPage(page-px)"> -{{px}}</button></span>
+    <button class="change-btn" *ngIf="page>1" (click)="goToPage((page-1))">Previous page</button>
+    <button class="change-btn">Current page - {{page}}</button>
+    <button class="change-btn" *ngIf="page<lastPage" (click)="goToPage((page+1))">Next page</button>
+    <span *ngFor="let px of pages.reverse()"><button class="change-btn" *ngIf="page < lastPage - px + 1" (click)="goToPage(page+px)"> +{{px}}</button></span>
+    <button class="change-btn" *ngIf="page != lastPage" (click)="goToPage(lastPage)">Last page</button>
+  </div>
+</div>
+<div class="all-photos">
+  <div *ngFor="let photo of photos" class="photo-mini" (click)="goToLink(photo.id)">
+    <div class="photo-mini-img">
+      <img src="{{photo.thumbnailUrl}}">
+    </div>
+    <div class="photo-mini-info">
+      <p>ID : {{photo.id}}</p>
+      <p>Album ID : {{photo.albumId}}</p>
+<!--      <p>Title : {{photo.title}}</p>-->
+      <button class="go-btn">Go to details</button>
+    </div>
+  </div>
+</div>
+<div class="page-change-btn">
+  <div class="page-changes">
+    <button class="change-btn" *ngIf="page != 1" (click)="goToPage(1)">First page</button>
+    <span *ngFor="let px of pages.reverse()"><button class="change-btn" *ngIf="page > px" (click)="goToPage(page-px)"> -{{px}}</button></span>
+    <button class="change-btn" *ngIf="page>1" (click)="goToPage((page-1))">Previous page</button>
+    <button class="change-btn">Current page - {{page}}</button>
+    <button class="change-btn" *ngIf="page<lastPage" (click)="goToPage((page+1))">Next page</button>
+    <span *ngFor="let px of pages.reverse()"><button class="change-btn" *ngIf="page < lastPage - px + 1" (click)="goToPage(page+px)"> +{{px}}</button></span>
+    <button class="change-btn" *ngIf="page != lastPage" (click)="goToPage(lastPage)">Last page</button>
+  </div>
+</div>

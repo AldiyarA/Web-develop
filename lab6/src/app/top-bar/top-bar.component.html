@@ -1,0 +1,38 @@
+<div class="top">
+  <div class="left-top">
+  <a routerLink="">
+    <div class="logo">
+      <img src="../assets/images/A.jpg" height="100px" class="img-a">
+      <div class="logo-name">
+        <h1>AxDI albums</h1>
+      </div>
+    </div>
+  </a>
+    <div class="bnt-block">
+      <button routerLink="" class="bnt-action"><img src="../assets/images/home.png" height="40px"></button>
+      <button routerLink="/about" class="bnt-action"><img src="../assets/images/question.png" height="40px"></button>
+    </div>
+    <div class="bnt-block">
+      <button (click)="goForward()" class="bnt-action"><img src="../assets/images/forward.png" height="40px"></button>
+      <button (click)="goBack()" class="bnt-action"><img src="../assets/images/back.png" height="40px"></button>
+    </div>
+  </div>
+  <div class="search-for">
+    <div *ngIf="!albumSearching" class="search">
+      <input placeholder="Search for Album by ID:" [(ngModel)]="albumId">
+      <button class="bnt-search" (click)="searchAlbum()">
+        <img src="../assets/images/search.png" height="20px">
+      </button>
+    </div>
+    <p *ngIf="albumSearching">Loading ...</p>
+  </div>
+  <div class="search-for">
+    <div *ngIf="!photoSearching" class="search">
+      <input placeholder="Search for Photo by ID:" [(ngModel)]="photoId">
+      <button class="bnt-search" (click)="searchPhoto()">
+        <img src="../assets/images/search.png" height="20px">
+      </button>
+    </div>
+    <p *ngIf="photoSearching">Loading ...</p>
+  </div>
+</div>

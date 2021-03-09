@@ -1,0 +1,17 @@
+<!--<button (click)="this.router.navigate(['/albums'])">Return back</button>-->
+<!--<div *ngIf="album" class="album">-->
+<!--  <a routerLink="/albums/{{album.id}}/photos">-->
+<!--  <h1>ID: {{album.id}}</h1>-->
+<!--  <h1>User ID: {{album.userId}}</h1>-->
+<!--  <h1>title: {{album.title}}</h1>-->
+<!--  </a>-->
+<!--</div>-->
+<h1 *ngIf="loading">Loading ...</h1>
+<div *ngIf="!loading" class="album-info">
+  <h1>ID : {{album.id}}</h1>
+  <h1 *ngIf="!managing">User ID : {{album.userId}}</h1>
+  <h1 *ngIf="!managing">Title : {{album.title}}</h1>
+  <app-create-album *ngIf="managing" [album]="album" (newAlbum)="updateAlbum($event)" (cancel)="stopManaging()"> </app-create-album>
+  <button class="btn-1" *ngIf="!managing" (click)="managing = true;">Manage info</button>
+  <button class="btn-1" (click)="this.router.navigate(['/albums', album.id, 'photos'])">View photos</button>
+</div>

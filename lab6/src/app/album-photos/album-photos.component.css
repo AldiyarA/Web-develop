@@ -1,0 +1,22 @@
+.all-photos{
+  display: flex;
+  flex-flow: row wrap;
+}
+.photo-mini{
+  margin: 10px;
+  display: flex;
+  border: gray 1px solid;
+  width: 440px;
+  height: 200px;
+  cursor: pointer;
+}
+.photo-mini-img{
+  /*margin: 10px;*/
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.photo-mini-info{
+  margin: 10px;
+}

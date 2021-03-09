@@ -1,0 +1,10 @@
+<!--<p>photo-detail works!</p>-->
+<h1 *ngIf="loading">Loading ...</h1>
+<div *ngIf="!loading" class="photo-details">
+  <img src="{{photo.url}}">
+  <div class="photo-main-info">
+    <h1>ID : {{photo.id}}</h1>
+    <a routerLink="/albums/{{photo.albumId}}"><h2>Album ID : {{photo.albumId}}</h2></a>
+    <h3>Title: {{photo.title}}</h3>
+  </div>
+</div>

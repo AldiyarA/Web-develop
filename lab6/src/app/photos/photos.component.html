@@ -1,0 +1,2 @@
+<h1 *ngIf="loading">Loading ...</h1>
+<app-photos-list *ngIf="!loading" [photos] = 'photos' [lastPage]="lastPage()" [page]="page" (toPage)="this.router.navigate(['/photos', 'page', $event]); ngOnInit();" (link)="this.router.navigate(['/photos', $event]);"></app-photos-list>
